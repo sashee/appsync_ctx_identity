@@ -1,0 +1,5 @@
+type Query {
+	auth_info: AWSJSON
+	@aws_auth(cognito_groups: ["user"])
+	@aws_iam
+}
