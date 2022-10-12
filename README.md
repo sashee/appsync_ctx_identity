@@ -76,6 +76,29 @@ Result:
 }
 ```
 
+### Lambda
+
+* Select the ```Lambda-test``` API
+* Go to Queries
+* Insert a token (any string would do)
+* Send the query:
+
+```graphql
+query MyQuery {
+  auth_info
+}
+```
+
+Result:
+
+```json
+{
+  "data": {
+    "auth_info": "{\"authType\":\"Lambda Authorization\",\"identity\":{\"resolverContext\":{\"a\":\"test\",\"this\":\"is\"}}}"
+  }
+}
+```
+
 ## Cleanup
 
 * ```terraform destroy```
